@@ -1,32 +1,34 @@
-Ad Click Prediction Analysis
-This project explores an advertising dataset to predict whether a user will click on an ad based on various demographic and behavioral features. The analysis transitions from a baseline classification model to a refined Random Forest approach to improve predictive accuracy.
+# Ad-Click Prediction: From Biased Baseline to Robust Ensemble Learning
 
-Project Overview
-The goal of this analysis was to build a binary classifier to identify potential ad-clickers. The project documents the process of identifying model failure, improving performance through ensemble learning, and interpreting which features drive user engagement.
+## 📌 Project Overview
+Digital advertising relies on precision, delivering ads to users unlikely to engage results in high ad spend leakage and poor campaign Return on Investment. This project addresses the challenge of predicting user ad-clicks using a dataset where behavior is naturally imbalanced (65% Click vs. 35% No Click). The core objective is to move beyond a biased linear regression baseline model to a more sophisticated ensemble model that accurately identifies non-engaging users.
 
-Key Findings
-Initial Model Failure: The baseline model suffered from a severe class bias, achieving a high recall for the majority class but a 0.01 recall for Class 0 (non-clickers).
+## 🛠️ Tech Stack
+* **Language:** Python
+* **Environment:** Jupyter Notebook
+* **Libraries:** Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn
+* **Algorithms:** Logistic Regression, Random Forest Classifier
 
-Model Improvement: Implementing a Random Forest Algorithm significantly balanced the model, increasing the overall accuracy and drastically improving the F1-score for the minority class.
+## 📊 Methodology & Model Evolution
+The project follows a structured machine learning pipeline:
 
-Feature Importance: Through Random Forest feature analysis, we identified the primary drivers of ad clicks (e.g., Daily Internet Usage and Age), providing actionable insights into the target audience.
+1. **Baseline Model:** Initially implemented **Logistic Regression**, which failed to capture the minority class, resulting in a **Recall of only 0.01** for "No Click" events.
+2. **Refined Baseline:** Re-implemented Logistic Regression with **balanced class weights**, though performance remained inefficient for complex user patterns.
+3. **Final Solution:** Deployed a **Random Forest Algorithm**. This ensemble approach successfully overcame the class imbalance, improving "No Click" Recall to **0.50** while maintaining an **0.80 Recall** for clicks.
 
-Technologies Used
-Python 3.x
 
-Jupyter Notebook
 
-Scikit-Learn (Machine Learning & Evaluation)
+## 💡 Key Insights
+* **Feature Importance:** The model identified **Age** as the most critical predictor of engagement with an **importance score of 0.44**.
+* **Probability Scores:** Instead of simple binary labels, the model generates granular probabilities. For instance, the **18–24 age group** showed a high click probability of **86.4%**.
 
-Pandas & NumPy (Data Manipulation)
+## 📂 Project Structure
+Following the required academic/professional structure:
+* **Section 3: Model / System Design** - Justification for selecting Random Forest over Logistic Regression.
+* **Section 4: Core Implementation** - Documented code for model training and weighting.
+* **Section 5: Evaluation & Analysis** - Detailed comparison of confusion matrices and feature rankings.
+* **Section 6: Ethical Considerations** - Addressing model bias and responsible AI practices.
+* **Section 7: Conclusion & Future Scope** - Summary of findings and roadmap for deployment.
 
-Matplotlib & Seaborn (Data Visualization)
-
-Conclusion
-The analysis concludes that user behavior—specifically their level of digital activity—is a far stronger predictor of ad engagement than demographic factors alone.
-
-Daily Internet Usage: This emerged as the most significant predictor.
-
-Age: There is a clear correlation between age and engagement.
-
-Daily Time Spent on Site: Higher site engagement time correlates with higher click probability.
+## 🚀 Future Scope
+The next phase of this project involves deploying the **Random Forest model via Streamlit**. This would allow the model to process **real-time datasets**, providing marketers with an interactive dashboard for instant engagement predictions on live traffic.

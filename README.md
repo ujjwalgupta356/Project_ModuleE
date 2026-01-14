@@ -14,7 +14,7 @@ The project follows a structured machine learning pipeline:
 
 1. **Baseline Model:** Initially implemented **Logistic Regression**, which failed to capture the minority class, resulting in a **Recall of only 0.01** for "No Click" events.
 2. **Refined Baseline:** Re-implemented Logistic Regression with **balanced class weights**, though performance remained inefficient for complex user patterns.
-3. **Final Solution:** Deployed a **Random Forest Algorithm**. This ensemble approach successfully overcame the class imbalance, improving "No Click" Recall to **0.50** while maintaining an **0.80 Recall** for clicks.
+3. **Final Model:** Deployed a **Random Forest Algorithm**. This ensemble approach successfully overcame the class imbalance, improving "No Click" Recall to **0.50** while maintaining an **0.80 Recall** for clicks.
 
 
 
@@ -22,13 +22,7 @@ The project follows a structured machine learning pipeline:
 * **Feature Importance:** The model identified **Age** as the most critical predictor of engagement with an **importance score of 0.44**.
 * **Probability Scores:** Instead of simple binary labels, the model generates granular probabilities. For instance, the **18–24 age group** showed a high click probability of **86.4%**.
 
-## 📂 Project Structure
-Following the required academic/professional structure:
-* **Section 3: Model / System Design** - Justification for selecting Random Forest over Logistic Regression.
-* **Section 4: Core Implementation** - Documented code for model training and weighting.
-* **Section 5: Evaluation & Analysis** - Detailed comparison of confusion matrices and feature rankings.
-* **Section 6: Ethical Considerations** - Addressing model bias and responsible AI practices.
-* **Section 7: Conclusion & Future Scope** - Summary of findings and roadmap for deployment.
+
 
 ## 🚀 Future Scope
-The next phase of this project involves deploying the **Random Forest model via Streamlit**. This would allow the model to process **real-time datasets**, providing marketers with an interactive dashboard for instant engagement predictions on live traffic.
+While not covered in the current scope of this project, a vital next step would be to deploy the final Random Forest algorithm via a Streamlit web application. This would transform the model into a functional tool capable of analyzing real-time datasets, allowing marketers to receive instant engagement predictions for real time data..

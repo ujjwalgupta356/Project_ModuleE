@@ -25,4 +25,4 @@ The project follows a structured machine learning pipeline:
 
 
 ## 🚀 Future Scope
-While not covered in the current scope of this project, a vital next step would be to deploy the final Random Forest algorithm via a Streamlit web application. This would transform the model into a functional tool capable of analyzing real-time datasets, allowing marketers to receive instant engagement predictions for real time data..
+While not covered in the current scope of this project, a vital next step would be to deploy the final Random Forest algorithm via a Streamlit web application. This would transform the model into a functional tool capable of analyzing real-time datasets, allowing marketers to receive instant engagement predictions for real time data.
